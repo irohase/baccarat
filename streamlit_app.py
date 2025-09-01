@@ -63,7 +63,10 @@ def play_baccarat(bet_side, bet_amount):
     }
 
 # Streamlit UI
-st.title("🃏 バカラ・ゲーム (Baccarat)")
+st.markdown("### 🎲 バカラゲームアプリ")
+st.markdown("このアプリはPythonとStreamlitで作成したバカラ体験ゲームです。")
+st.markdown("広告（アフィリエイトリンク）を含む場合があります。")
+
 
 st.write(f"💰 現在の所持金: {st.session_state.money} チップ")
 
