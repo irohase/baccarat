@@ -65,7 +65,7 @@ def play_baccarat(bet_side, bet_amount):
 # Streamlit UI
 st.markdown(
     """
-    <a href="//af.moshimo.com/af/c/click?a_id=5158607&p_id=7066&pc_id=20221&pl_id=89317" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc><img src="//image.moshimo.com/af-img/6831/000000089317.jpg" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=5158607&p_id=7066&pc_id=20221&pl_id=89317" width="1" height="1" style="border:none;" loading="lazy">
+    <a href="//af.moshimo.com/af/c/click?a_id=5158720&p_id=3026&pc_id=6979&pl_id=38504" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc><img src="//image.moshimo.com/af-img/2440/000000038504.jpg" width="700" height="160" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=5158720&p_id=3026&pc_id=6979&pl_id=38504" width="1" height="1" style="border:none;" loading="lazy">
     """,
     unsafe_allow_html=True
 )
@@ -92,3 +92,13 @@ if st.button("💥 ゲームスタート！"):
     st.write(f"**勝者**: {result['result']}")
     st.success(f"💵 配当: {result['payout']} チップ")
     st.write(f"💰 新しい所持金: {st.session_state.money} チップ")
+
+
+
+
+st.markdown(
+    """
+    <a href="//af.moshimo.com/af/c/click?a_id=5158607&p_id=7066&pc_id=20221&pl_id=89317" rel="nofollow" referrerpolicy="no-referrer-when-downgrade" attributionsrc><img src="//image.moshimo.com/af-img/6831/000000089317.jpg" width="468" height="60" style="border:none;"></a><img src="//i.moshimo.com/af/i/impression?a_id=5158607&p_id=7066&pc_id=20221&pl_id=89317" width="1" height="1" style="border:none;" loading="lazy">
+    """,
+    unsafe_allow_html=True
+)
