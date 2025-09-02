@@ -69,7 +69,6 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
 st.markdown("### 🎲 バカラゲームアプリ")
 st.markdown("このアプリはPythonとStreamlitで作成したバカラ体験ゲームです。")
 
