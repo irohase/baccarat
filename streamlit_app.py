@@ -63,9 +63,18 @@ def play_baccarat(bet_side, bet_amount):
     }
 
 # Streamlit UI
+st.markdown(
+    """
+    <a href="https://af.moshimo.com/af/c/click?a_id=5158575&p_id=54&pc_id=54&pl_id=620" target="_blank">
+        <img src="https://image.moshimo.com/af-img/0032/000000000620.gif" width="468" height="60" style="border:none;">
+    </a>
+    """,
+    unsafe_allow_html=True
+)
+
 st.markdown("### 🎲 バカラゲームアプリ")
 st.markdown("このアプリはPythonとStreamlitで作成したバカラ体験ゲームです。")
-st.markdown("広告（アフィリエイトリンク）を含む場合があります。")
+
 
 
 st.write(f"💰 現在の所持金: {st.session_state.money} チップ")
