@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,session
 import random
 
 app=Flask(__name__)
@@ -36,14 +36,13 @@ def judge_winner(p_score,b_score):
     else:
         return "バンカー"  
 
+app.secret_key="バカラアプリ"
 
+session["chips"]=1000
 
 @app.route("/",methods=["GET","POST"])
 def index():
-    if request.method=="GET":
-        return render_template("index.html")
-
-    elif request.method=="POST":
+    if request.method=="POST":
 
         player_hand=draw_card()
         banker_hand=draw_card()
@@ -61,6 +60,7 @@ def index():
                                banker_score=banker_score,
                                winner=winner
                                )
+    return render_template("index.html")
 
 
 if __name__=="__main__":
