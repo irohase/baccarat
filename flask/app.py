@@ -40,6 +40,7 @@ app.secret_key="バカラアプリ"
 
 session["chips"]=1000
 
+
 @app.route("/",methods=["GET","POST"])
 def index():
     if request.method=="POST":
