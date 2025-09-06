@@ -38,10 +38,13 @@ def judge_winner(p_score,b_score):
 
 app.secret_key="バカラアプリ"
 
-session["chips"]=1000
+
 
 @app.route("/",methods=["GET","POST"])
 def index():
+    if request.method=="GET":
+        return render_template("index.html")
+
     if request.method=="POST":
 
         player_hand=draw_card()
@@ -60,7 +63,7 @@ def index():
                                banker_score=banker_score,
                                winner=winner
                                )
-    return render_template("index.html")
+
 
 
 if __name__=="__main__":
