@@ -68,9 +68,6 @@ def update_chips(chips,choice,win,amount):
     
     return chips
 
-
-
-
 app.secret_key="バカラアプリ"
 
 @app.route("/",methods=["GET","POST"])
