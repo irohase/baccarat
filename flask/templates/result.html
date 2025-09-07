@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head><title>結果発表</title></head>
+<head>
+    <title>結果発表</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+</head>
 
 <body>
+    <div class="container">
     <h1>結果発表</h1>
 
     <h2>プレイヤーのカード : {{player_hand}} → {{player_score}}</h2>
@@ -12,7 +17,7 @@
 
     <a href="/">もう一度プレイ</a>
 
-
+    </div>
 </body>
 
 

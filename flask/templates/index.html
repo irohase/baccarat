@@ -1,11 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head><title>バカラ</title></head>
+<head>
+  <title>バカラ</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+
+</head>
 
 <body>
-  <h1>バカラアプリ</h1>
-  <form method="POST">
-    <button type="submit">カードを配る</button>
+  <h1 class="title">バカラアプリ</h1>
+
+  <h2 class="chip-box">現在のチップ数 : {{chips}}</h2>
+
+  <form method="POST" class="game-form">
+    <label class="form-label">ベット額:</label>
+    <input type="number" name="bet" min="1" required class="bet-input">
+
+    <p class="form-label">賭け先</p>
+
+    <div class="bet-options">
+      <label class="bet-choice player">
+        <input type="radio" name="bet_choice" value="player" required>
+        Player
+      </label>
+
+      <label class="bet-choice banker">
+        <input type="radio" name="bet_choice" value="banker" required>
+        Banker
+      </label>
+
+      <label class="bet-choice tie">
+        <input type="radio" name="bet_choice" value="tie" required>
+        Tie
+      </label>
+    </div>
+
+    <button type="submit" class="submit-btn">カードを配る</button>
   </form>
 </body>
 </html>
