@@ -8,6 +8,14 @@
   <h2>現在のチップ数 : {{chips}}</h2>
 
   <form method="POST">
+    <p>ベット額 : <input type="number" name="bet" min="1" required></p>
+
+    <p>賭け先</p>
+
+    <input type="radio" name="bet_choice" value="player" required>Player<br>
+    <input type="radio" name="bet_choice" value="banker" required>Banker<br>
+    <input type="radio" name="bet_choice" value="tie" required>Tie<br>
+
     <button type="submit">カードを配る</button>
   </form>
 </body>
