@@ -37,10 +37,6 @@ def judge_winner(p_score,b_score):
         return "バンカー"  
 
 
-<<<<<<< HEAD
-
-
-
 #選択の設定
 def choice_env(choice):
     if choice=="player":
