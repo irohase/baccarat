@@ -40,11 +40,7 @@ def judge_winner(p_score,b_score):
 <<<<<<< HEAD
 
 
-@app.route("/",methods=["GET","POST"])
-def index():
-    if request.method=="GET":
-        return render_template("index.html")
-=======
+
 #選択の設定
 def choice_env(choice):
     if choice=="player":
@@ -92,7 +88,7 @@ def index():
     if chips==0:
         session["chips"]=1000
         return render_template("gameover.html")
->>>>>>> temp
+
 
     if request.method=="POST":
         bet=int(request.form.get("bet"))
@@ -110,16 +106,8 @@ def index():
             session["chips"]=update_chips(chips,choice_env(bet_choice),winner,bet)
 
 
-<<<<<<< HEAD
-        return render_template("result.html",
-                               player_hand=player_hand,
-                               banker_hand=banker_hand,
-                               player_score=player_score,
-                               banker_score=banker_score,
-                               winner=winner
-                               )
 
-=======
+  
             return render_template("result.html",
                                 player_hand=player_hand,
                                 banker_hand=banker_hand,
@@ -129,7 +117,6 @@ def index():
                                 bet=bet
                                 )
         
->>>>>>> temp
 
     return render_template("index.html",chips=chips)
 
