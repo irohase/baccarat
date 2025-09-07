@@ -1,0 +1,117 @@
+body{
+    background-color: #0f3d2e;
+    color:#fffdd0;
+    font-family: sans-serif;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #174d3c;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.title{
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+
+.chip-box{
+    background-color: #fffdd0;
+    color:#0f3d2e;
+    padding: 15px 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* フォーム全体 */
+.game-form {
+  background-color: #174d3c;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  margin: 30px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* ラベル・見出し */
+.form-label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* ベット額の入力欄 */
+.bet-input {
+  padding: 8px;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
+}
+
+/* 賭け先の選択肢 */
+.bet-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* 賭け先カード */
+.bet-choice {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px 5px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 0 0 2px black;
+  text-align: center;
+  background-color: #444;
+}
+
+.bet-choice input {
+  display: none;  /* ラジオボタン非表示 */
+}
+
+/* カードっぽく色分け */
+.bet-choice.player { background-color: #c0392b; }   /* 赤 */
+.bet-choice.banker { background-color: #2980b9; }   /* 青 */
+.bet-choice.tie    { background-color: #27ae60; }   /* 緑 */
+
+/* 選択時に拡大・影をつける */
+.bet-choice:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px white;
+}
+
+/* 決定ボタン */
+.submit-btn {
+  background-color: #a63c28;
+  color: white;
+  font-size: 18px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #c94e3f;
+}
