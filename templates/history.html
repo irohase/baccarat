@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ user.name }}さんの履歴</title>
+</head>
+<body>
+  <h1>{{ user.name }}さんのバカラ履歴</h1>
+
+  <table border="1">
+    <tr>
+      <th>No</th>
+      <th>賭け先</th>
+      <th>勝者</th>
+      <th>ベット額</th>
+      <th>残チップ</th>
+      <th>P手札</th>
+      <th>P点数</th>
+      <th>B手札</th>
+      <th>B点数</th>
+    </tr>
+
+    {% for h in histories %}
+    <tr>
+      <td>{{ h.id }}</td>
+      <td>{{ h.bet_choice }}</td>
+      <td>{{ h.winner }}</td>
+      <td>{{ h.bet_amount }}</td>
+      <td>{{ h.chips_after }}</td>
+      <td>{{ h.player_hand }}</td>
+      <td>{{ h.player_score }}</td>
+      <td>{{ h.banker_hand }}</td>
+      <td>{{ h.banker_score }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+
+  <br>
+  <a href="{{ url_for('index') }}">戻る</a>
+</body>
+</html>

@@ -115,3 +115,18 @@ body{
 .submit-btn:hover {
   background-color: #c94e3f;
 }
+
+.history-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.history-btn:hover {
+  background-color: #2980b9;
+}
