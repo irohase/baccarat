@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理者ログイン画面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+
+</head>
+<body>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>chips</th>
+        </tr>
+        {% for user in users %} 
+        <tr>
+            <th>{{user.id}}</th>
+            <th>{{user.name}}</th>
+            <th>{{user.chips}}</th>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>管理者ログイン画面</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+
+
+</head>
+
+
+<body style="text-align:center; margin-top:100px;">
+
+    <form method="POST" action="/admin">
+  <label>ID: <input type="text" name="ID"></label><br>
+  <label>パスワード: <input type="password" name="password"></label><br>
+  <button type="submit">ログイン</button>
+</form>
+
+  
+</body>
+
+
+
+</html>
