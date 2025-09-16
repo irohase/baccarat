@@ -188,5 +188,21 @@ def history(user_id):
     histories=History.query.filter_by(user_id=user_id).all()
     return render_template("history.html",user=user,histories=histories)
 
+
+@app.route("/admin",methods=["GET","POST"])
+def admin():
+    if request.method=="POST":
+        ID=request.form.get("ID")
+        password=request.form.get("password")
+
+        if ID=="irohase" and password=="2025":
+            users=User.query.all()
+            return render_template("admin.html",users=users)
+
+
+    return render_template("admin_login.html")
+
+
+
 if __name__=="__main__":
     app.run(debug=True)
