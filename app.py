@@ -4,24 +4,27 @@ from flask_sqlalchemy import SQLAlchemy
 
 app=Flask(__name__)
 
-
+SUIT_LIST = ["spade","heart","diamond","club"]
 CARD_LIST = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
 
 #カード配布関数
 def draw_card():
     hand=[]
     for _ in range(2):
-        hand.append(random.choice(CARD_LIST))
+        suit=random.choice(SUIT_LIST)
+        number=random.choice(CARD_LIST)
+        hand.append(f"{suit}_{number}")
     return hand
 
 #引いたカードの数字を決める関数
 def card_env(card):
-    if card=="A":
+    number=card.split("_")[1]
+    if number=="A":
         return 1
-    elif card in ["10","J","Q","K"]:
+    elif number in ["10","J","Q","K"]:
         return 0
     else:
-        return int(card)
+        return int(number)
 
 #引いたカードの合計を計算する関数
 def total_score(cards):

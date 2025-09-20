@@ -11,8 +11,19 @@
     <div class="container">
     <h1>結果発表</h1>
 
-    <h2>プレイヤーのカード : {{player_hand}} → {{player_score}}</h2>
-    <h2>バンカーのカード : {{banker_hand}} → {{banker_score}}</h2>
+    <h2>プレイヤーのカード : {{player_score}}</h2>
+    <div>
+      {% for card in player_hand %}
+      <img src="{{url_for('static',filename='trump_images/'+card+'.png')}}" width="100">
+      {% endfor %}
+    </div>
+
+    <h2>バンカーのカード : {{banker_score}}</h2>
+    <div>
+      {% for card in banker_hand %}
+      <img src="{{url_for('static',filename='trump_images/'+card+'.png')}}" width="100">
+      {% endfor %}
+    </div>
 
     <h2>勝者 : {{winner}}</h2>
 
